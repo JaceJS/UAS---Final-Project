@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+}
+
+ul{
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(201, 83, 43);
+  padding: 0px 12px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: aliceblue;
+}
+
+footer {
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(201, 83, 43);
+  padding: 0px 12px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: aliceblue;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.mobile-display {
+  display: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  padding-left: 12px;
+}
+
+main {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 2%;
+  text-align: center;
+}
+
+/* page home */
+.home-content {
+  background-color: #6b865c;
+  border-radius: 16px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+  padding: 6px;
+  margin: 24px;
+}
+
+.home-content > img {
+  width: 50%;
+}
+
+.home-deskripsi {
+  width: 60%;
+  margin-left: 19%;
+  margin-top: 2%;
+  text-align: center;
+  display: none;
+}
+
+.home-deskripsi.active {
+  display: block;
+}
+
+.lihat-lebih:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: red;
+}
+
+/* page profil kelompok */
+.profil-body{
+  background-image: url("./images/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.profil-main{
+  height: 100vh;
+}
+
+.profil-main.active{
+  height: 100%;
+}
+
+.profil-content{
+  display: none;
+}
+
+.profil-content.active{
+  display: block;
+}
+
+#tombol-anggota{
+  font-size: 16px;
+  padding: 8px 16px;
+  margin: 16px;
+  background-color: rgb(201, 83, 43);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+}
+
+#tombol-anggota:hover{
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+button:active{
+  box-shadow: none;
+}
+
+/* page UNSRAT */
+#link-unsrat{
+  color: red;
+}
+
+.unsrat-content{
+  margin-bottom: 50px;
+}
+
+.logounsrat{
+  width : 25%;
+}
+
+.fatek{
+  width : 80%;
+}
+
+.imgit{
+  width : 80%;
+}
+
+#webfatek{
+  color : red;
+}
+
+#webit{
+  color : red;
+}
+
+/* Page Other*/
+.other-main{
+  height: 100%;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+textarea {
+  width: 70%;
+  height: 150px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid silver;
+  margin: 24px 0;
+}
+
+#submit_feedback {
+  width: 100px;
+  background-color: red;
+  border: none;
+  color: white;
+  font-size: 1vw;
+  border-radius: 5px;
+  padding: 8px 0;
+}
+
+#submit_feedback:hover {
+  cursor: pointer;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .mobile-display {
+    display: block;
+  }
+
+  .hamburger-icon:hover {
+    cursor: pointer;
+  }
+
+  .hamburger-icon.active {
+    display: none;
+  }
+
+  .close-icon.active {
+    display: block;
+  }
+
+  .close-icon {
+    display: none;
+  }
+
+  .close-icon:hover {
+    cursor: pointer;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    width: 95%;
+    top: 70px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    background-color: rgb(201, 83, 43);
+    z-index: 999;
+  }
+
+  .menu {
+    padding: 6px 0;
+  }
+}

@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("./web/images/konoha.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: cursive;
+}
+
+.container {
+  width: 400px;
+  min-height: 400px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  padding: 40px 30px;
+  background: rgba(201, 82, 43, 0.5);
+  color: #fff;
+}
+
+.container .login-text {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 20px;
+  display: block;
+  text-transform: capitalize;
+}
+
+.container .login-email .input-group {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 25px;
+}
+
+.container .login-email .input-group input {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #e7e7e7;
+  padding: 15px 20px;
+  font-size: 1rem;
+  border-radius: 30px;
+  background: transparent;
+  outline: none;
+  transition: 0.3s;
+  color: #fff;
+}
+
+/* .container .login-email .input-group input:focus,
+.container .login-email .input-group input:valid {
+  border-color: #a29bfe;
+} */
+
+.container .login-email .input-group .btn {
+  display: block;
+  width: 100%;
+  padding: 15px 20px;
+  text-align: center;
+  border: none;
+  background: #68ff72;
+  outline: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.container .login-email .input-group .btn:hover {
+  transform: translateY(-5px);
+  background: #19ff28;
+}
+
+.login-register-text {
+  color: #fff;
+  font-weight: 600;
+}
+
+.login-register-text a {
+  text-decoration: none;
+  color: #19ff28;
+}
+
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    height: 100%;
+    color: #fff;
+}
+
+.form-berkas {
+  width: 80%;
+  min-height: 200px;
+  background-color: rgba(201, 82, 43, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 40px 30px;  
+}
+
+.container-upload {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.container-upload .submit {
+  display: block;
+  margin-top: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  background: rgb(201, 82, 43);
+  padding: 6px 10px;
+  width: 15%; 
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  font-size: 1.3vw;
+}
+
+.container-upload .submit:hover {
+  background: rgb(197, 54, 7);
+}
+
+.container-upload .submit:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+.container-logout .login-email .input-group .btn {
+  display: block;
+  width: 15%;
+  padding: 6px 10px;
+  text-align: center;
+  border: none;
+  background: #68ff72;
+  outline: none;
+  border-radius: 30px;
+  font-size: 1vw;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+.container-logout .login-email .input-group .btn:hover {
+  transform: translateY(-5px);
+  background: #19ff28;
+}
+
+.container .back {
+  text-align: center;
+}
+
+/* style untuk menu di header */
+.input-body{
+  display: block;
+  height: 100vh;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(201, 83, 43);
+  padding: 10px 12px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: aliceblue;
+  height: 58.5px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+header nav a:hover{
+  text-decoration: underline;
+}
+
+.mobile-display {
+  display: none;  
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+    padding-left: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 300px;
+  }
+
+  .container-upload .submit{
+    width: 25%;
+    font-size: 3vw;
+  }
+
+  .container-logout .login-email .input-group .btn {
+    width: 25%;
+    font-size: 2.5vw;
+  }
+
+  .mobile-display {
+    display: block;
+  }
+
+  .hamburger-icon:hover {
+    cursor: pointer;
+  }
+
+  .hamburger-icon.active {
+    display: none;
+  }
+
+  .close-icon.active {
+    display: block;
+  }
+
+  .close-icon {
+    display: none;
+  }
+
+  .close-icon:hover {
+    cursor: pointer;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    width: 95%;
+    top: 70px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    background-color: rgb(201, 83, 43);
+    z-index: 999;
+  }
+
+  .menu {
+    padding: 6px 0;
+  }
+}
